@@ -14,7 +14,7 @@ NYU CV 课程项目：复现 [Learning Conformal Explainers for Image Classifier
 | Pixelwise、Super-Pixels、Scaled Values 校准 | 已实现，包含关键数值测试 |
 | 5 × 3 × 4 = 60 组实验流程 | 合成数据流程验证通过，不代表论文实验完成 |
 | Streamlit Demo | 已实现预计算结果浏览；不是任意图片实时上传解释器 |
-| GitHub 远程仓库 | 按当前约定稍后创建；本地仓库先行 |
+| GitHub 远程仓库 | [KaidiLyu/conformal-explainers](https://github.com/KaidiLyu/conformal-explainers)，公开仓库 |
 | 正式结果、论文对照、失败分析、报告与展示 | 待完成 |
 
 ## 安装与快速运行
