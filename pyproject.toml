@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bamboo-conformal-explainers"
+version = "0.1.0"
+description = "Course reproduction of Learning Conformal Explainers for Image Classifiers"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.4,<3", "torchvision>=0.19,<1", "captum>=0.7,<1", "numpy>=1.26,<3", "scikit-image>=0.24,<1", "scikit-learn>=1.5,<2", "PyYAML>=6,<7", "Pillow>=10", "tqdm>=4", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9"]
+demo = ["streamlit>=1.38,<2", "pandas>=2"]
+
+[project.scripts]
+conformal-cv = "conformal_explainers.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fastshap = ["LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+exclude = ["src/fastshap"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
