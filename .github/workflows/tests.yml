@@ -13,7 +13,8 @@ jobs:
           cache: pip
       - run: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
       - run: pip install -e '.[dev,demo]'
-      - run: ruff check src/conformal_explainers tests app.py
+      - run: ruff check src/conformal_explainers tests scripts app.py
       - run: pytest -q
       - run: conformal-cv smoke
+      - run: conformal-cv report --results outputs/smoke
 

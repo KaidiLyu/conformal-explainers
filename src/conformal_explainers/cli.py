@@ -42,9 +42,21 @@ def main():
         )
     smoke = sub.add_parser("smoke")
     smoke.add_argument("--output", default="outputs/smoke")
+    report = sub.add_parser(
+        "report", help="Generate plots and analysis from saved results"
+    )
+    report.add_argument("--results", required=True)
+    report.add_argument(
+        "--output", help="Fresh output directory; default: RESULTS/report"
+    )
     args = p.parse_args()
     # 下载的权重默认放在项目 data/ 内，避免污染组员的全局缓存。
     os.environ.setdefault("TORCH_HOME", str(Path("data/torch-cache").resolve()))
+    if args.command == "report":
+        from .reporting import generate_report
+
+        print(generate_report(args.results, args.output))
+        return
     if args.command == "split":
         print(
             json.dumps(write_splits(args.data_root, args.output, args.seed), indent=2)

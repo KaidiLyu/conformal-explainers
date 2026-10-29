@@ -1,6 +1,6 @@
 seed: 42
 data_root: data/imagenette2-320
-manifest: data/splits.json
+manifest: manifests/imagenette-seed42.json
 image_size: 224
 classifier_checkpoint: outputs/checkpoints/resnet50.pt
 fastshap_checkpoint: outputs/checkpoints/fastshap.pt

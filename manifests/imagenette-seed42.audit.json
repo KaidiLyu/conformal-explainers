@@ -1,0 +1,65 @@
+{
+  "counts": {
+    "train": 8522,
+    "validation": 947,
+    "calibration": 2924,
+    "test": 1001
+  },
+  "class_counts": {
+    "train": {
+      "1": 859,
+      "8": 856,
+      "0": 867,
+      "3": 772,
+      "5": 860,
+      "6": 865,
+      "7": 838,
+      "2": 894,
+      "9": 864,
+      "4": 847
+    },
+    "validation": {
+      "5": 96,
+      "0": 96,
+      "2": 99,
+      "9": 96,
+      "8": 95,
+      "7": 93,
+      "1": 96,
+      "3": 86,
+      "4": 94,
+      "6": 96
+    },
+    "calibration": {
+      "8": 297,
+      "3": 288,
+      "9": 291,
+      "2": 266,
+      "4": 305,
+      "5": 293,
+      "1": 294,
+      "6": 290,
+      "0": 288,
+      "7": 312
+    },
+    "test": {
+      "2": 91,
+      "1": 101,
+      "4": 104,
+      "0": 99,
+      "6": 99,
+      "3": 98,
+      "5": 101,
+      "8": 102,
+      "7": 107,
+      "9": 99
+    }
+  },
+  "images_decoded": 13394,
+  "manifest_sha256": "4191e096d87597f146f5fc6c5da2b9ec2eb071f075db5c8479ac3742f67a22e3",
+  "dataset_sha256": "0c86ec5376de254e8b09e1faec7e05cdb01cf3b7d115a4cb20853d7ef0eba87b",
+  "archive_md5": "3df6f0d01a2c9592104656642f5e78a3",
+  "archive_sha256": "569b4497c98db6dd29f335d1f109cf315fe127053cedf69010d047f0188e158c",
+  "duplicate_content_groups": [],
+  "source": "https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-320.tgz"
+}

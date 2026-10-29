@@ -64,8 +64,13 @@ def write_splits(root, output, seed=42):
         raise ValueError("Data leakage: overlapping paths")
     manifest = dict(seed=seed, classes=classes, splits=splits)
     output = Path(output)
+    payload = json.dumps(manifest, indent=2)
+    if output.exists() and output.read_text() != payload:
+        raise ValueError(
+            "Refusing to replace an existing split manifest; use a new path"
+        )
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(manifest, indent=2))
+    output.write_text(payload)
     return {k: len(v) for k, v in splits.items()}
 
 
